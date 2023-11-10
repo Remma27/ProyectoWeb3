@@ -12,8 +12,7 @@
         <script defer src="/__/firebase/10.5.2/firebase-database-compat.js"></script>
         <script defer src="/__/firebase/10.5.2/firebase-firestore-compat.js"></script>
         <script defer src="/__/firebase/init.js"></script>
-        <script defer src="js/user/isLogin.js"></script>
-        <title>Index</title>
+        <title>Sign Up</title>
     </head>
     <body>
         <header>
@@ -21,17 +20,25 @@
         </header>
 
         <main>
-            <h4>Index</h4>
+            <h4>Sign Up</h4>
             <br />
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ex saepe dolores labore est rerum
-                dolorem explicabo accusamus veniam molestiae atque libero cumque unde deserunt nemo, aperiam esse
-                quisquam vitae.
-            </p>
+            <div>
+                <label for="txtNombre">Name:</label><br />
+                <input type="text" id="txtNombre" /><br /><br />
+
+                <label for="txtEmail">Email:</label><br />
+                <input type="text" id="txtEmail" /><br /><br />
+
+                <label for="txtContra">Password:</label><br />
+                <input type="text" id="txtContra" />
+                <br /><br />
+                <input type="button" id="btnInsUser" name="btnInsUser" value="Sign Up" />
+            </div>
         </main>
 
         <footer>
             <footer-component></footer-component>
         </footer>
+        <script defer src="js/user/signup.js"></script>
     </body>
 </html>

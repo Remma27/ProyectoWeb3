@@ -72,3 +72,42 @@ main {
 img {
     padding-left: 60px;
 }
+
+.main {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo {
+    color: #333;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.boton {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #45a049;
+}

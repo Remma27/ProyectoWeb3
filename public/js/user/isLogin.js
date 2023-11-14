@@ -17,7 +17,7 @@ function validar() {
 
 function salir() {
     auth.signOut().then(() => {
-        document.location.href = 'login.html';
+        document.location.href = 'index.html';
     }).catch((error) => {
         alert('Error al cerrar la sesión: ' + error.message);
     });

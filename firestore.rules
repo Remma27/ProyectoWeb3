@@ -1,12 +1,56 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    // Global Rules
     match /{datosUsuarios}/{document=**}{
-      allow read:if true;
+      allow read: if true;
       allow create: if request.resource.data.idemp is string &&
                        request.resource.data.usuario is string &&
                        request.resource.data.email is string;
       allow update: if true;
+      allow delete: if false;
+    }
+
+    // Users Collection Rules
+    match /users/{userId} {
+      allow read: if true;
+      allow create: if request.resource.data.uid is string &&
+                       request.resource.data.fullName is string &&
+                       request.resource.data.schoolGrade is string &&
+                       request.resource.data.aboutMe is string &&
+                       request.resource.data.profilePictureURL is string;
+      allow update: if request.auth.uid == userId;
+      allow delete: if false;
+    }
+
+    // ResearchProjects Collection Rules
+    match /researchProjects/{projectId} {
+      allow read: if true;
+      allow create: if request.resource.data.projectID is string &&
+                       request.resource.data.uid is string &&
+                       request.resource.data.researchTitle is string &&
+                       request.resource.data.areaOfInterest is string &&
+                       request.resource.data.topicDescription is string &&
+                       request.resource.data.pdfFileName is string &&
+                       request.resource.data.conclusions is string &&
+                       request.resource.data.finalRecommendations is string &&
+                       'timestamp' in request.resource.data;
+      allow update: if request.auth.uid == resource.data.uid;
+      allow delete: if false;
+    }
+
+    // Comments Collection Rules
+    match /comments/{commentId} {
+      allow read: if true;
+      allow create: if request.resource.data.commentID is string &&
+                       request.resource.data.projectID is string &&
+                       request.resource.data.uid is string &&
+                       request.resource.data.comment is string &&
+                       request.resource.data.rating >= 1 &&
+                       request.resource.data.rating <= 5 &&
+                       'timestamp' in request.resource.data;
+      allow update: if request.auth.uid == resource.data.uid;
       allow delete: if false;
     }
   }

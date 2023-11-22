@@ -13,14 +13,14 @@ service cloud.firestore {
     }
 
     // Users Collection Rules
-    match /users/{userId} {
+    match /{students}/{document=**} {
       allow read: if true;
-      allow create: if request.resource.data.uid is string &&
-                       request.resource.data.fullName is string &&
-                       request.resource.data.schoolGrade is string &&
-                       request.resource.data.aboutMe is string &&
-                       request.resource.data.profilePictureURL is string;
-      allow update: if request.auth.uid == userId;
+      allow create: if request.resource.data.studentID is string &&
+                      request.resource.data.fullName is string &&
+                      request.resource.data.schoolGrade is string &&
+                      request.resource.data.aboutMe is string &&
+                      request.resource.data.profilePictureURL is string;
+      allow update: if true;
       allow delete: if false;
     }
 

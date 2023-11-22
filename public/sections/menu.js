@@ -20,6 +20,9 @@ class Menu extends HTMLElement {
                 <li class="nav-item">
                     <a class="nav-link" href="signup.html">Sign Up</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="addProyect.html">Añadir Proyecto</a>
+                </li>
             </ul>
         </div>
     </div>

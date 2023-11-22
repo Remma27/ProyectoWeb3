@@ -20,12 +20,7 @@ class Menu extends HTMLElement {
                 <li class="nav-item">
                     <a class="nav-link" href="signup.html">Sign Up</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="student.html">Add Student</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" onclick="salir()" aria-current="page">Log Out</a>
-                </li>
+              
             </ul>
         </div>
     </div>

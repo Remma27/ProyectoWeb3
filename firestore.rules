@@ -26,18 +26,7 @@ service cloud.firestore {
 
     // ResearchProjects Collection Rules
     match /researchProjects/{projectId} {
-      allow read: if true;
-      allow create: if request.resource.data.projectID is string &&
-                       request.resource.data.uid is string &&
-                       request.resource.data.researchTitle is string &&
-                       request.resource.data.areaOfInterest is string &&
-                       request.resource.data.topicDescription is string &&
-                       request.resource.data.pdfFileName is string &&
-                       request.resource.data.conclusions is string &&
-                       request.resource.data.finalRecommendations is string &&
-                       'timestamp' in request.resource.data;
-      allow update: if request.auth.uid == resource.data.uid;
-      allow delete: if false;
+        allow read, create, update, delete: if true;
     }
 
     // Comments Collection Rules

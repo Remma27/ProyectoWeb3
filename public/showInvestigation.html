@@ -31,33 +31,17 @@
         </header>
 
         <main>
-            <h4>Uploaded projects</h4>
-
-            <div id="filterContainer">
-                <label for="areaFilter">Filter by Area of Interest:</label>
-                <input type="text" id="areaFilter" />
-                <button id="btnFilter">Filter</button>
-            </div>
+            <h4>Specific project</h4>
             <br />
-            <div id="projectsContainer">
-                <div class="project">
-                    <div class="project-content">
-                        <!-- Project information goes here -->
-                        <h3>Project Title</h3>
-                        <div><strong>Area of Interest:</strong> Area of Interest</div>
-                        <div><strong>Topic description:</strong> Topic Description</div>
-                        <a href="#" target="_blank"><strong>Click to view the PDF file</strong></a>
-                        <div><strong>Conclusions:</strong> Project Conclusions</div>
-                        <div><strong>Final recommendations:</strong> Final Recommendations</div>
-
-                        <!--<div class="comments-section" id="commentsSection">
-                            <ul id="commentsList"></ul>
-                            <input type="text" id="commentInput" placeholder="Add a comment">
-                            <button id="btnAddComment">Add Comment</button>
-                        </div>-->
-                    </div>
-                </div>
+            <div id="filterContainer">
+                 <label for="projectTitleFilter">Search the project:</label>
+                <input type="text" id="projectTitleFilter" />
+                 <button id="btnTitleFilter">Search</button>
             </div>
+            <div id="projectContainer">
+
+            </div>
+
         </main>
 
         <footer>
@@ -68,7 +52,7 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
         ></script>
-        <script defer src="js/investigation/showInvestigation.js"></script>
-        <script defer src="js/investigation/comments/comments.js"></script>
+        <script defer src="js/investigation/showSpecificInvestigation.js"></script>
+        <!--<script defer src="js/investigation/comments/comments.js"></script>-->
     </body>
 </html>

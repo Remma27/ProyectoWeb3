@@ -27,6 +27,9 @@ class Menu extends HTMLElement {
                     <a class="nav-link" href="researchWork.html">Projects</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="showInvestigation.html">Search project</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="student.html">Add Student</a>
                 </li>
                 <li class="nav-item">

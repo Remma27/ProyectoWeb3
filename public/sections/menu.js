@@ -21,11 +21,12 @@ class Menu extends HTMLElement {
                     <a class="nav-link" href="signup.html">Sign Up</a>
                 </li>
                 <li class="nav-item">
-               
-                <a class="nav-link" href="addInvestigation.html">Añadir Proyecto</a>
+                    <a class="nav-link" href="addInvestigation.html">Añadir Proyecto</a>
                 </li>
-                <li class="nav-
-                item">
+                <li class="nav-item">
+                    <a class="nav-link" href="researchWork.html">Projects</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="student.html">Add Student</a>
                 </li>
                 <li class="nav-item">

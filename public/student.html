@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles/authen.css" />
+        <link rel="stylesheet" href="styles/student.css" />
         <script src="sections/menu.js" defer></script>
         <script src="sections/footer.js" defer></script>
         <script defer src="/__/firebase/10.5.2/firebase-app-compat.js"></script>
@@ -25,36 +25,58 @@
                 overflow: hidden;
             }
         </style>
-        <title>Login</title>
+        <title>Student</title>
     </head>
     <body>
         <main>
             <div class="container">
-                <div class="login-form">
-                    <h2 class="text-center">Login</h2>
+                <div class="student-form">
+                    <h2 class="text-center">Student</h2>
                     <form>
                         <div class="form-group">
-                            <label for="txtEmail">Email:</label>
+                            <label for="txtfullName">Full Name:</label>
                             <input
-                                type="email"
+                                type="text"
                                 class="form-control"
-                                id="txtEmail"
-                                placeholder="Email"
+                                id="txtfullName"
+                                placeholder="Full Name"
                                 required="required"
                             />
                         </div>
                         <div class="form-group">
-                            <label for="txtContra">Password:</label>
+                            <label for="txtschoolGrade">School Grade:</label>
                             <input
-                                type="password"
+                                type="text"
                                 class="form-control"
-                                id="txtContra"
-                                placeholder="Password"
+                                id="txtschoolGrade"
+                                placeholder="School Grade"
                                 required="required"
                             />
                         </div>
                         <div class="form-group">
-                            <button type="button" id="btnLogin" class="btn btn-primary btn-block">Sign in</button>
+                            <label for="txtaboutMe">About Me:</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="txtaboutMe"
+                                placeholder="About Me"
+                                required="required"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtprofilePictureURL">Profile Picture:</label>
+                            <input
+                                type="file"
+                                class="form-control"
+                                id="txtprofilePictureURL"
+                                placeholder="Profile Picture"
+                                required="required"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="btnSaveData" class="btn btn-primary btn-block">
+                                Add Student
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -65,6 +87,6 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
         ></script>
-        <script defer src="js/user/login.js"></script>
+        <script defer src="js/investigation/addStudent.js"></script>
     </body>
 </html>

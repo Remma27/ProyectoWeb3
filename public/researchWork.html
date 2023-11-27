@@ -5,14 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/showInvestigation.css">
         <script src="sections/menu.js" defer></script>
         <script src="sections/footer.js" defer></script>
         <script defer src="/__/firebase/10.5.2/firebase-app-compat.js"></script>
         <script defer src="/__/firebase/10.5.2/firebase-auth-compat.js"></script>
         <script defer src="/__/firebase/10.5.2/firebase-database-compat.js"></script>
         <script defer src="/__/firebase/10.5.2/firebase-firestore-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-storage-compat.js"></script>
-
         <script defer src="/__/firebase/init.js"></script>
         <script defer src="js/user/isLogin.js"></script>
 
@@ -24,7 +23,7 @@
             crossorigin="anonymous"
         />
 
-        <title>Index</title>
+        <title>Projects</title>
     </head>
     <body>
         <header>
@@ -32,13 +31,33 @@
         </header>
 
         <main>
-            <h4>Index</h4>
+            <h4>Uploaded projects</h4>
+
+            <div id="filterContainer">
+                <label for="areaFilter">Filter by Area of Interest:</label>
+                <input type="text" id="areaFilter" />
+                <button id="btnFilter">Filter</button>
+            </div>
             <br />
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ex saepe dolores labore est rerum
-                dolorem explicabo accusamus veniam molestiae atque libero cumque unde deserunt nemo, aperiam esse
-                quisquam vitae.
-            </p>
+            <div id="projectsContainer">
+                <div class="project">
+                    <div class="project-content">
+                        <!-- Project information goes here -->
+                        <h3>Project Title</h3>
+                        <div><strong>Area of Interest:</strong> Area of Interest</div>
+                        <div><strong>Topic description:</strong> Topic Description</div>
+                        <a href="#" target="_blank"><strong>Click to view the PDF file</strong></a>
+                        <div><strong>Conclusions:</strong> Project Conclusions</div>
+                        <div><strong>Final recommendations:</strong> Final Recommendations</div>
+
+                        <!--<div class="comments-section" id="commentsSection">
+                            <ul id="commentsList"></ul>
+                            <input type="text" id="commentInput" placeholder="Add a comment">
+                            <button id="btnAddComment">Add Comment</button>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
@@ -49,5 +68,7 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
         ></script>
+        <script defer src="js/investigation/showInvestigation.js"></script>
+        <script defer src="js/investigation/comments/comments.js"></script>
     </body>
 </html>

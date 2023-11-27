@@ -5,14 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/showInvestigation.css">
         <script src="sections/menu.js" defer></script>
         <script src="sections/footer.js" defer></script>
         <script defer src="/__/firebase/10.5.2/firebase-app-compat.js"></script>
         <script defer src="/__/firebase/10.5.2/firebase-auth-compat.js"></script>
         <script defer src="/__/firebase/10.5.2/firebase-database-compat.js"></script>
         <script defer src="/__/firebase/10.5.2/firebase-firestore-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-storage-compat.js"></script>
-
         <script defer src="/__/firebase/init.js"></script>
         <script defer src="js/user/isLogin.js"></script>
 
@@ -24,7 +23,7 @@
             crossorigin="anonymous"
         />
 
-        <title>Index</title>
+        <title>Projects</title>
     </head>
     <body>
         <header>
@@ -32,13 +31,17 @@
         </header>
 
         <main>
-            <h4>Index</h4>
+            <h4>Specific project</h4>
             <br />
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ex saepe dolores labore est rerum
-                dolorem explicabo accusamus veniam molestiae atque libero cumque unde deserunt nemo, aperiam esse
-                quisquam vitae.
-            </p>
+            <div id="filterContainer">
+                 <label for="projectTitleFilter">Search the project:</label>
+                <input type="text" id="projectTitleFilter" />
+                 <button id="btnTitleFilter">Search</button>
+            </div>
+            <div id="projectContainer">
+
+            </div>
+
         </main>
 
         <footer>
@@ -49,5 +52,7 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
         ></script>
+        <script defer src="js/investigation/showSpecificInvestigation.js"></script>
+        <!--<script defer src="js/investigation/comments/comments.js"></script>-->
     </body>
 </html>

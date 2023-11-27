@@ -12,7 +12,7 @@ class Menu extends HTMLElement {
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Index</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a>
@@ -20,6 +20,22 @@ class Menu extends HTMLElement {
                 <li class="nav-item">
                     <a class="nav-link" href="signup.html">Sign Up</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="addInvestigation.html">Añadir Proyecto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="researchWork.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="showInvestigation.html">Search project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="student.html">Add Student</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="salir()" aria-current="page">Log Out</a>
+                </li>
+              
             </ul>
         </div>
     </div>

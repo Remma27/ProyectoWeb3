@@ -61,6 +61,14 @@ function showProjectByTitleFilter(titleFilter) {
     });
 }
 
+// Function to filter with the enter key
+function handleEnterKey(event) {
+  if (event.key === 'Enter') {
+      var titleFilterValue = projectTitleFilterInput.value.trim();
+      showProjectByTitleFilter(titleFilterValue);
+  }
+}
+
 // Add click event to the search button
 btnTitleFilter.addEventListener("click", function () {
   var titleFilterValue = projectTitleFilterInput.value.trim();
@@ -71,3 +79,5 @@ btnTitleFilter.addEventListener("click", function () {
     projectContainer.innerHTML = "";
   }
 });
+
+projectTitleFilterInput.addEventListener('keyup', handleEnterKey);

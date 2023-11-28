@@ -17,8 +17,9 @@ function validar() {
 
 function salir() {
     auth.signOut().then(() => {
+        alert('Successfully closed session');
         document.location.href = 'login.html';
     }).catch((error) => {
-        alert('Error al cerrar la sesión: ' + error.message);
+        alert('Failed to log out: ' + error.message);
     });
 }

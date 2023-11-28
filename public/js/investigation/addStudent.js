@@ -6,6 +6,7 @@ const txtfullName = document.querySelector('#txtfullName');
 const txtschoolGrade = document.querySelector('#txtschoolGrade');
 const txtaboutMe = document.querySelector('#txtaboutMe');
 const txtprofilePictureURL = document.querySelector('#txtprofilePictureURL');
+const txtStudentID = document.querySelector('#txtStudentID');
 const btnSaveData = document.querySelector('#btnSaveData');
 
 btnSaveData.addEventListener('click', function () {
@@ -24,13 +25,13 @@ btnSaveData.addEventListener('click', function () {
             const studentID = db.collection("students").doc().id;
 
             db.collection("students").doc(studentID).set({
-                "studentID": studentID,
+                "studentID": txtStudentID.value,
                 "fullName": txtfullName.value,
                 "schoolGrade": txtschoolGrade.value,
                 "aboutMe": txtaboutMe.value,
                 "profilePictureURL": url,
             }).then(function () {
-                alert("Record ID: " + studentID);
+                alert("Student Added Successfully" + studentID);
                 limpiar();
             }).catch(function (FirebaseError) {
                 alert("Error adding the document:", FirebaseError);
@@ -43,6 +44,7 @@ btnSaveData.addEventListener('click', function () {
 
 
 function limpiar() {
+    txtStudentID.value = '';
     txtfullName.value = '';
     txtschoolGrade.value = '';
     txtaboutMe.value = '';

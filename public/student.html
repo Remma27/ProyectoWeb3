@@ -14,6 +14,7 @@
         <script defer src="/__/firebase/10.5.2/firebase-firestore-compat.js"></script>
         <script defer src="/__/firebase/10.5.2/firebase-storage-compat.js"></script>
 
+        <script defer src="js/user/isLogin.js"></script>
         <script defer src="/__/firebase/init.js"></script>
         <script defer src="js/user/isLogin.js"></script>
 
@@ -37,6 +38,16 @@
                 <div class="student-form">
                     <h2 class="text-center">Student</h2>
                     <form>
+                        <div class="form-group">
+                            <label for="txtStudentID">ID:</label>
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="txtStudentID"
+                                placeholder="ID"
+                                required="required"
+                            />
+                        </div>
                         <div class="form-group">
                             <label for="txtfullName">Full Name:</label>
                             <input

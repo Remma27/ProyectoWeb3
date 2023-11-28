@@ -127,3 +127,84 @@ h2 {
     width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
     height: auto; /* Hace que la altura se ajuste automáticamente para mantener la proporción */
 }
+/* styles.css */
+
+h2 {
+    color: #333;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#carouselExampleInterval {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    padding-top: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.col-md-8,
+.col-md-4 {
+    margin-bottom: 20px;
+}
+
+.col-md-4 h3,
+.col-md-8 h3 {
+    border-bottom: 2px solid #007bb5;
+    padding-bottom: 5px;
+}
+
+.col-md-4 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.col-md-4 li {
+    margin-bottom: 10px;
+}
+
+.col-md-4 a {
+    text-decoration: none;
+    color: #007bb5;
+}
+
+.col-md-4 a:hover {
+    text-decoration: underline;
+}
+  /* Agregamos estilos directamente en línea para mejorar el diseño del texto de bienvenida */
+  .welcome-text {
+    font-family: 'Arial', sans-serif; /* Cambia la fuente del texto según tu preferencia */
+    font-size: 24px; /* Ajusta el tamaño del texto según tu preferencia */
+    line-height: 1.5; /* Ajusta el espacio entre líneas para mejorar la legibilidad */
+    margin-bottom: 20px; /* Añade espacio en la parte inferior del texto */
+}
+
+.welcome-text p {
+    font-size: 18px; /* Ajusta el tamaño del texto del párrafo según tu preferencia */
+}
+#carouselExampleInterval {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.carousel-inner img {
+    width: 90%;
+    height: auto;
+   
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    margin-top: 60px; /* Ajusta la cantidad de margen según sea necesario */
+}

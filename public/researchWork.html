@@ -34,9 +34,14 @@
             <h4>Uploaded projects</h4>
 
             <div id="filterContainer">
-                <label for="areaFilter">Filter by Area of Interest:</label>
-                <input type="text" id="areaFilter" />
-                <button id="btnFilter">Filter</button>
+                <label for="areaFilter"></label>
+                <select id="areaFilter" class="form-select" aria-label="Default select example">
+                    <option selected>Select an Area of Interest</option>
+                    <option value="Espanol">Espanol</option>
+                    <option value="Sociales">Sociales</option>
+                    <option value="Musica">Musica</option>
+                    <option value="Matematicas">Matematicas</option>
+                </select>
             </div>
             <br />
             <div id="projectsContainer">
@@ -49,12 +54,6 @@
                         <a href="#" target="_blank"><strong>Click to view the PDF file</strong></a>
                         <div><strong>Conclusions:</strong> Project Conclusions</div>
                         <div><strong>Final recommendations:</strong> Final Recommendations</div>
-
-                        <!--<div class="comments-section" id="commentsSection">
-                            <ul id="commentsList"></ul>
-                            <input type="text" id="commentInput" placeholder="Add a comment">
-                            <button id="btnAddComment">Add Comment</button>
-                        </div>-->
                     </div>
                 </div>
             </div>
@@ -69,6 +68,5 @@
             crossorigin="anonymous"
         ></script>
         <script defer src="js/investigation/showInvestigation.js"></script>
-        <script defer src="js/investigation/comments/comments.js"></script>
     </body>
 </html>

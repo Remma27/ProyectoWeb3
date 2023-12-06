@@ -29,6 +29,9 @@ function showProjectsByAreaFilter() {
                 var projectDiv = document.createElement('div');
                 projectDiv.classList.add('project');
 
+                var projectID = document.createElement('h3');
+                projectID.textContent=doc.data().projectID;
+
                 var projectTitle = document.createElement('h3');
                 projectTitle.textContent = doc.data().researchTitle;
 
@@ -51,10 +54,16 @@ function showProjectsByAreaFilter() {
                 // Add elements to the container
                 projectDiv.appendChild(projectTitle);
                 projectDiv.appendChild(projectAreaOfInterest);
+                /*
                 projectDiv.appendChild(projectDescription);
                 projectDiv.appendChild(projectPdfUrl);
                 projectDiv.appendChild(projectConclusions);
-                projectDiv.appendChild(projectFinalRecommendations);
+                projectDiv.appendChild(projectFinalRecommendations);*/
+
+                var viewMoreButton = document.createElement('a');
+                viewMoreButton.textContent = 'Show more';
+                viewMoreButton.href = 'investigationDetails.html?id=' + doc.projectID; // ID from the investigation
+                projectDiv.appendChild(viewMoreButton);
 
                 // Add the project to the main container
                 projectsContainer.appendChild(projectDiv);
@@ -100,11 +109,16 @@ function showAllProjects() {
                 // Add elements to the container
                 projectDiv.appendChild(projectTitle);
                 projectDiv.appendChild(projectAreaOfInterest);
-                projectDiv.appendChild(projectDescription);
+                /*projectDiv.appendChild(projectDescription);
                 projectDiv.appendChild(projectPdfUrl);
                 projectDiv.appendChild(projectConclusions);
-                projectDiv.appendChild(projectFinalRecommendations);
+                projectDiv.appendChild(projectFinalRecommendations);*/
 
+                var viewMoreButton = document.createElement('a');
+                viewMoreButton.textContent = 'Show more';
+                viewMoreButton.href = 'investigationDetails.html?id=' + doc.projectID; // ID from the investigation
+                projectDiv.appendChild(viewMoreButton);
+                
                 // Add the project to the main container
                 projectsContainer.appendChild(projectDiv);
             });
